@@ -54,7 +54,7 @@ The code is tested on Ubuntu 14.04. IMU-TK requires the following tools and libr
 ```
 #!bash
 
-sudo apt-get install build-essential cmake libeigen3-dev libqt4-dev libqt4-opengl-dev freeglut3-dev gnuplot
+sudo apt-get update && sudo apt-get install -y libqt4-opengl libgoogle-glog0v5 libgoogle-glog-dev liblapack3 liblapack-dev libblas3 libblas-dev libatlas-base-dev build-essential cmake libeigen3-dev libqt4-dev libqt4-opengl-dev freeglut3-dev gnuplot
 ```
 and follow this [guide](http://ceres-solver.org/building.html) to install Ceres Solver.
 
