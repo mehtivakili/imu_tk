@@ -1,3 +1,4 @@
+# CMakeLists.txt
 cmake_minimum_required(VERSION 2.8)
 project(imu_tk)
 
@@ -81,4 +82,9 @@ if(BUILD_IMU_TK_EXAMPLES)
   add_executable(test_integration apps/test_integration.cpp)
   target_link_libraries(test_integration ${IMU_TK_LIBS})
   set_target_properties(test_integration PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+endif()
+
+# Add cross-compilation checks (optional)
+if(CMAKE_CROSSCOMPILING)
+  message(STATUS "Cross-compiling for ${CMAKE_SYSTEM_PROCESSOR}")
 endif()
